@@ -12,6 +12,10 @@ import smtplib
 import os
 from email.message import EmailMessage
 
+GMAIL_SMTP_SERVER = "smtp.gmail.com"
+LETTER = "letter_1.txt"
+BIRTHDAYS = "birthdays.csv"
+
 # import os and use it to get the Github repository secrets
 MY_EMAIL = os.environ.get("MY_EMAIL")
 MY_PASSWORD = os.environ.get("MY_PASSWORD")
