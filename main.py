@@ -41,11 +41,11 @@ with open(BIRTHDAYS, mode="r") as file:
                 letter = file.read()
                 updated_letter = letter.replace("[NAME]", name)
                 email_message = EmailMessage()
-                email_message["From"] = my_email
-                email_message["To"] = my_email
+                email_message["From"] = MY_EMAIL
+                email_message["To"] = MY_EMAIL
                 email_message["Subject"] = "Happy Birthday :)"
                 email_message.set_content(updated_letter)
                 with smtplib.SMTP(GMAIL_SMTP_SERVER, 587) as connection:
                     connection.starttls()
-                    connection.login(my_email, password)
+                    connection.login(MY_EMAIL, MY_PASSWORD)
                     connection.send_message(email_message)
